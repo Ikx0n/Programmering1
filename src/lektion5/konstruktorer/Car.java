@@ -1,6 +1,6 @@
 package lektion5.konstruktorer;
 /**
- * Bil utseende
+ * En bil som vi kodar i PRRPRR1
  */
 public class Car {
 	private int numberOfDoors = 5;
