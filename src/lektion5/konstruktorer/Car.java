@@ -18,19 +18,23 @@ public class Car {
 	public Car(String selectedColor) {
 		color = selectedColor;
 	}
-
+	/**
+	 * 
+	 * @param sätter hastigheter för bilen
+	 */
 	public void setSpeed(int newSpeed) {
 		speed = newSpeed;
 	}
 
 	public int getSpeed() {
-		return speed;
+		return speed;	 
+		/** 
+		 * väljer färg
+		 */
 	}
-
 	public void setColor(String newColor) {
 		color = newColor;
 	}
-
 	public String getColor() {
 		return color;
 
