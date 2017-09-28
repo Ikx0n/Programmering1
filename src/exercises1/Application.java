@@ -7,9 +7,15 @@ public class Application {
 		System.out.println("Dankus Memus");
 
 		// Sätter namnet på person till Samme. Är egentligen John Doe i classen.
-		Person myPerson = new Person("Samme");
+		Person myPerson = new Person("Samme","Khan");
 		// Säger "my name is" sedan så hämtar den namnen ovan och lägger till det.
-		System.out.println("my name is " + myPerson.getName());
+		System.out.println("my name is " + myPerson.getName() + myPerson.getlastName());
+
+		
 	}
 
-}
+
+
+	
+	}
+
