@@ -7,9 +7,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Users scanner input
-		Scanner usersGuess = new Scanner(System.in);
-		System.out.println("Select Heads or Tails: ");
-		String usersPick = usersGuess.nextLine().toLowerCase();
+		
+		Scanner usersScanner = new Scanner(System.in);
+		System.out.println("Select Rock, Paper and Scissor: ");
+		
+		String usersPick = usersScanner.nextLine().toLowerCase();
 		
 	//	System.out.println(usersPick);
 		
@@ -22,18 +24,24 @@ public class Main {
 	//	System.out.println(coinFlippValue);
 		
 		
-		if (jankenValue == true) {
+		if (jankenValue == 0) {
 			System.out.println("Computer - Rock");
-		} else {
+		} else if (jankenValue == 1) {
 			System.out.println("Computer - Paper");
 		} else {
 			System.out.println("Computer - Scissors");
 		}
 		
 		
-		if (jankenValue == true && usersPick.equals("Rock") || jankenValue == false && usersPick.equals("tails")) {
+		if (jankenValue == 0 && usersPick.equals("paper") || 
+			jankenValue == 1 && usersPick.equals("scissor") || 
+			jankenValue == 2 && usersPick.equals("rock")) {
 			System.out.println("You won!");
-		}  else {
+		}  else if (jankenValue == 0 && usersPick.equals("rock") || 
+				    jankenValue == 1 && usersPick.equals("paper") || 
+				    jankenValue == 2 && usersPick.equals("scissor")) {
+			System.out.println("Draw.");
+		} else {
 			System.out.println("You lost!!!!");
 		}
 		
