@@ -9,7 +9,7 @@ public class Main {
 		// Users scanner input
 		
 		Scanner usersScanner = new Scanner(System.in);
-		System.out.println("Select Rock, Paper and Scissor: ");
+		System.out.println("Select Rock, Paper and Scissors: ");
 		
 		String usersPick = usersScanner.nextLine().toLowerCase();
 		
@@ -34,7 +34,7 @@ public class Main {
 		
 		
 		if (jankenValue == 0 && usersPick.equals("paper") || 
-			jankenValue == 1 && usersPick.equals("scissor") || 
+			jankenValue == 1 && usersPick.equals("scissors") || 
 			jankenValue == 2 && usersPick.equals("rock")) {
 			System.out.println("You won!");
 		}  else if (jankenValue == 0 && usersPick.equals("rock") || 
