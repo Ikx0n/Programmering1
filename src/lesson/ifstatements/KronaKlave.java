@@ -16,20 +16,20 @@ public class KronaKlave {
 		
 		// Computers random selector.
 		Random randomGenerator = new Random();
-		int coinFlippValue = randomGenerator.nextInt(3);
+		int coinFlipValue = randomGenerator.nextInt(3);
 		
 		
-	//	System.out.println(coinFlippValue);
+	//	System.out.println(coinFlipValue);
 		
 		
-		if (coinFlippValue == true) {
+		if (coinFlipValue == true) {
 			System.out.println("Computer - Heads");
 		} else {
 			System.out.println("Computer - Tails");
 		}
 		
 		
-		if (coinFlippValue == true && usersPick.equals("heads") || coinFlippValue == false && usersPick.equals("tails")) {
+		if (coinFlipValue == true && usersPick.equals("heads") || coinFlipValue == false && usersPick.equals("tails")) {
 			System.out.println("You won!");
 		}  else {
 			System.out.println("You lost!!!!");
