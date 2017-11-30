@@ -1,10 +1,15 @@
 package lanaria;
 
 import javax.swing.JOptionPane;
+
 // String[] * = new String[] { "", "" };
 // 	int response* = JOptionPane.showOptionDialog(null,"", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,* ,* );
 // if (response* == 0) {
 public class main {
+	
+	
+private static String name;
+	
 	public static void main(String[] args) {
 		printBoard();
 	}
@@ -12,7 +17,7 @@ public class main {
 	private static void printBoard() {
 
 		JOptionPane.showMessageDialog(null, "Lanaria", "Board", -1);
-		String name = JOptionPane.showInputDialog("Reveal your name hero! :");
+		name = JOptionPane.showInputDialog("Reveal your name hero! :");
 		JOptionPane.showMessageDialog(null, "You shall henceforth be referred to as " + name);
 		JOptionPane.showInputDialog("What do you fight for? ", "I fight for honor.");
 
@@ -32,9 +37,11 @@ public class main {
 
 	private static void RightPath() {
 		JOptionPane.showMessageDialog(null, "As you walk up the path it leads to the base of a mountain");
-		String[] Cold = new String[] { "Press on" , "Turn Back" };
-		int response2 = JOptionPane.showOptionDialog(null,"You traverse up halfway until you start freezing. Do you press on or turn back?", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cold, Cold);
-	
+		String[] Cold = new String[] { "Press on", "Turn Back" };
+		int response2 = JOptionPane.showOptionDialog(null,
+				"You traverse up halfway until you start freezing. Do you press on or turn back?", null,
+				JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cold, Cold);
+
 		if (response2 == 0) {
 			PressOn();
 		} else if (response2 == 1) {
@@ -43,17 +50,17 @@ public class main {
 	}
 
 	private static void LeftPath() {
-		String[] Combat = new String[] { "Attack", "Defend" , "Run" };
+		String[] Combat = new String[] { "Attack", "Defend", "Run" };
 		JOptionPane.showMessageDialog(null,
 				"As you walk down the the path a small green goblin attacks, what do you do?");
-		int Combat1 = JOptionPane.showOptionDialog(null,"", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Combat,Combat);
+		int Combat1 = JOptionPane.showOptionDialog(null, "", null, JOptionPane.DEFAULT_OPTION,
+				JOptionPane.PLAIN_MESSAGE, null, Combat, Combat);
 		if (Combat1 == 0) {
-			
+
 		} else if (Combat1 == 1) {
-			
-		}
-		else if (Combat1 == 2)
-			
+
+		} else if (Combat1 == 2)
+
 			;
 
 	}
@@ -63,8 +70,9 @@ public class main {
 				"The blistering cold gnaws at you but you press on, only to find yourself tripping on some ice and cutting your leg open on a sharp glacier");
 		JOptionPane.showMessageDialog(null, "* You have started bleeding!");
 		String[] coldp2 = new String[] { "Continue", "Find Shelter" };
-		int cold2 = JOptionPane.showOptionDialog(null,"You are feeling nauseous do you continue or find shelter?", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,coldp2 ,coldp2 );
-		
+		int cold2 = JOptionPane.showOptionDialog(null, "You are feeling nauseous do you continue or find shelter?",
+				null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, coldp2, coldp2);
+
 		if (cold2 == 0) {
 			cold2Continue();
 		} else if (cold2 == 1) {
@@ -81,15 +89,17 @@ public class main {
 		JOptionPane.showMessageDialog(null, "*The door to the room opens and a beautiful woman walks in*");
 		JOptionPane.showMessageDialog(null,
 				"So you finally wake up, i was afraid you were too far gone, you had lost alot of blood and had frostbite on your leg.");
-		JOptionPane.showMessageDialog(null,
-				"Im Charzi, my son Cain here found you in the snow.");
+		JOptionPane.showMessageDialog(null, "Im Charzi, my son Cain here found you in the snow.");
 		JOptionPane.showMessageDialog(null, "*You look down only to see a stump where your leg used to be*");
-		JOptionPane.showMessageDialog(null, "*The woman sees the terror in your eyes so she puts a hand on your chest*");
+		JOptionPane.showMessageDialog(null,
+				"*The woman sees the terror in your eyes so she puts a hand on your chest*");
 		String[] rest = new String[] { "Rest", "Leave" };
-		int rest = JOptionPane.showOptionDialog(null,"Dont move, you need to rest. We have a prosthetic technician in our village, he will fix you right up. Ofcourse you are free to go if thats what you wish, there are crutches over there if you do.", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,rest ,rest );
-		if (rest == 0) {
+		int rest1 = JOptionPane.showOptionDialog(null,
+				"Dont move, you need to rest. We have a prosthetic technician in our village, he will fix you right up. Ofcourse you are free to go if thats what you wish, there are crutches over there if you do.",
+				null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, rest, rest);
+		if (rest1 == 0) {
 			RestContinue();
-		} else if (rest == 1) {
+		} else if (rest1 == 1) {
 			Village();
 		}
 	}
@@ -105,19 +115,39 @@ public class main {
 	private static void TurnBack() {
 		JOptionPane.showMessageDialog(null, "The cold proved too much for you so you turn back");
 	}
+
 	private static void RestContinue() {
-}
+	}
+
 	private static void Village() {
-		String[] Villagechoice = new String[] { "Prosthetics", "Inn", "" };
-		int VillageC = JOptionPane.showOptionDialog(null,"Where do you wish to go?", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,Villagechoice ,Villagechoice, Villagechoice, Villagechoice );
+		String[] Villagechoice = new String[] { "Prosthetics", "Inn", "Charzi", "Wishing Well" };
+		int VillageC = JOptionPane.showOptionDialog(null,"Where do you wish to go?", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,Villagechoice ,Villagechoice );
 		
 		if (VillageC == 0) {
-		
+		ProstheticsGuy();
 		} else if (VillageC == 1) {
-		
+		InnLobby();
 		} else if (VillageC == 2) {
+			CharziHouse();
 		} else if (VillageC == 3) {
+			WishingWell1();
 		}
-}
+	}
+		
 
+	private static void ProstheticsGuy() {
+	}
+
+	private static void InnLobby() {
+
+	}
+
+	private static void CharziHouse() {
+		String[] Charzidialog1 = new String[] {  name, "Id rather not say" };
+		int CharziHouse1 = JOptionPane.showOptionDialog(null,"By the way i didnt catch your name!", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null,Charzidialog1 ,Charzidialog1 );
+	}
+
+	private static void WishingWell1() {
+
+	}
 }
